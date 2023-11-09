@@ -1,0 +1,106 @@
+:root{
+    --color-primary: #0073d8;
+    --color-secundary: #4d8ec7;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gray: #7d7d7d;
+    --color-third: #adc8df;
+}
+
+.background_ {
+    background-color: var(--color-primary);
+}
+
+/**
+*   Formulario
+*/
+
+.form{
+    display: flex;
+    max-width: 300px;
+    flex-direction: column;
+    margin: 0px auto;
+}
+
+.form label{
+    padding-left: 5px;
+    
+}
+
+.form input{
+    background-color: var(--color-secundary);
+    border-radius: 8px;
+    border: none;
+    margin: 12px 0px 8px 0px;
+    padding: 8px;
+    padding-left: 20px;
+}
+
+.form button{
+    margin: 10px 0px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+    padding: 8px;
+    font-weight: 700;
+}
+
+.form button:hover{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+}
+
+::placeholder{
+    color: #3a3939;
+}
+
+/**
+* Consulta
+*/
+
+.consulta{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    text-align: left;
+    padding: 32px 32px!important;
+    border-radius: 16px;
+    margin-top: 12px;
+}
+
+.consulta span{
+    display: flex;
+    justify-content: flex-end;
+}
+.consulta .consulta_div{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 375px) {
+    .consulta .consulta_div{
+        flex-direction: row;
+    }
+  }
+.consulta .consulta_div a{
+    background-color: var(--color-primary)!important;
+    color: var(--color-white);
+    margin: 6px auto;
+    border: 1px solid var(--color-primary)!important;
+}
+
+details {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    margin: 5px auto;
+    padding: 5px 5px;
+    width: 280px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+details .form input{
+    background-color: #adc8df;
+}

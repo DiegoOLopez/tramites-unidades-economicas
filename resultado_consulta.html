@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+    <script src="./assets/js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="./css/cover.css" rel="stylesheet">
+    <!-- Estilos dievteam -->
+    <title>Estado de tramites Unidades economicas Ixtlahuaca</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Scripts dievteam -->
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./js/php_script.js"></script>
+
+  </head>
+<body class="d-flex h-100 text-center background_">
+
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+    <header class="mb-auto">
+        <div>
+        <h3 class="float-md-start mb-0">Unidades Economicas</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="./index.html">Inicio</a>
+            <a class="nav-link fw-bold py-1 px-0" href="./acerca.html">Nosotros</a>
+            <a class="nav-link fw-bold py-1 px-0" href="./contacto.html">Contacto</a>
+        </nav>
+        </div>
+    </header>
+
+    <main class="px-3 consulta">
+        <span>Inicio: <span id="fecha_inicio"></span> </span>
+        <h2>Unidad economica: <span class="unidad_economica" id="denominacion"></span> </h2>
+        <p class="lead consulta_p">Estado: <span id="estado"></span> </p>
+        <p class="lead consulta_p">Duracion estimada: <span id="duracion"></span> </p>
+        <p class="lead consulta_p">Solicitante: <span id="nombre"></span> </p>
+        <div class="consulta_div">
+        <a href="./tramite.html" class="btn btn-lg btn-light fw-bold border-white bg-white">Nueva consulta</a>
+        <a href="./tramite.html" class="btn btn-lg btn-light fw-bold border-white bg-white">Contacto</a>
+        </div>
+    </main>
+
+    <footer class="mt-auto text-white-50">
+        <p>Ayuntamiento de Ixtlahuaca</p>
+    </footer>
+    </div>
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("fecha_inicio").innerText = localStorage.getItem("fecha_inicio");
+        document.getElementById("denominacion").innerText = localStorage.getItem("denominacion");
+        document.getElementById("estado").innerText = localStorage.getItem("estado");
+        document.getElementById("duracion").innerText = localStorage.getItem("duracion");
+        document.getElementById("nombre").innerText = localStorage.getItem("nombre");
+    </script>
+    </body>
+</html>

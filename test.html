@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .detailsBlock {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="toggleDetails('detailsBlock1')">Mostrar Detalles 1</button>
+<button onclick="toggleDetails('detailsBlock2')">Mostrar Detalles 2</button>
+
+<details id="detailsBlock1" class="detailsBlock">
+    <summary>Detalles 1</summary>
+    <p>Contenido de los detalles 1.</p>
+</details>
+
+<details id="detailsBlock2" class="detailsBlock">
+    <summary>Detalles 2</summary>
+    <p>Contenido de los detalles 2.</p>
+</details>
+
+<script>
+    function toggleDetails(elementId) {
+        var detailsBlock = document.getElementById(elementId);
+        if (detailsBlock.style.display === 'none') {
+            detailsBlock.style.display = 'block';
+        } else {
+            detailsBlock.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+
+<head>
+    <script src="./assets/js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="./css/cover.css" rel="stylesheet">
+    <!-- Estilos devteam -->
+    <title>Ingreso</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="d-flex h-100 text-center background_">
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+    <header class="mb-auto">
+        <div>
+            <h3 class="float-md-start mb-0">Administrador</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="./index.html">Inicio</a>
+                <a class="nav-link fw-bold py-1 px-0" href="./acerca.html">Nosotros</a>
+                <a class="nav-link fw-bold py-1 px-0" href="./contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="px-3">
+
+        <!-- Todo lo relacionado a empleado  -->
+
+        <!-- REGISTRO  -->
+        <section class="form_section">
+            <h1>INSERTAR EMPLEADOS</h1>
+            <form action="./php/sentencias.php" method="post" class="form">
+
+                <input type="hidden" name="table" value="empleado_insertar">
+
+                <label for="id_empleado_insertar">Id de empleado</label>
+                <input type="number" name="id_empleado_insertar" id="id_empleado_insertar" placeholder="01" required>
+
+                <label for="nombre_insertar">Nombre</label>
+                <input type="text" name="nombre_insertar" id="nombre_insertar" placeholder="">
+
+                <label for="apellido_p_insertar">Apellido paterno</label>
+                <input type="text" name="apellido_p_insertar" id="apellido_p_insertar" placeholder="">
+
+                <label for="apellido_m_insertar">Apellido materno</label>
+                <input type="text" name="apellido_m_insertar" id="apellido_m_insertar" placeholder="">
+
+                <label for="usuario_insertar">Usuario</label>
+                <input type="text" name="usuario_insertar" id="usuario_insertar" placeholder="">
+
+                <label for="clave_insertar">Clave</label>
+                <input type="text" name="clave_insertar" id="clave_insertar" placeholder="">
+
+                <label for="fecha_alta_insertar">Fecha de alta</label>
+                <input type="date" name="fecha_alta_insertar" id="fecha_alta_insertar">
+
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+
+
+            <!-- EDICION DE EMPLEADOS -->
+
+        <section class="form_section">
+            <h1>EDICIÓN DE EMPLEADOS</h1>
+            <form action="./php/sentencias.php" method="post" class="form">
+
+                <input type="hidden" name="table" value="empleado_actualizar">
+
+                <label for="id_empleado_actualizar">Id de empleado a editar</label>
+                <input type="number" name="id_empleado_actualizar" id="id_empleado_actualizar" placeholder="01" required>
+
+                <label for="nombre_actualizar">Nombre</label>
+                <input type="text" name="nombre_actualizar" id="nombre_actualizar" placeholder="">
+
+                <label for="apellido_p_actualizar">Apellido paterno</label>
+                <input type="text" name="apellido_p_actualizar" id="apellido_p_actualizar" placeholder="">
+
+                <label for="apellido_m_actualizar">Apellido materno</label>
+                <input type="text" name="apellido_m_actualizar" id="apellido_m_actualizar" placeholder="">
+
+                <label for="usuario_actualizar">Usuario</label>
+                <input type="text" name="usuario_actualizar" id="usuario_actualizar" placeholder="">
+
+                <label for="clave_actualizar">Clave</label>
+                <input type="text" name="clave_actualizar" id="clave_actualizar" placeholder="">
+
+                <label for="fecha_alta_actualizar">Fecha de alta</label>
+                <input type="date" name="fecha_alta_actualizar" id="fecha_alta_actualizar">
+
+                <button type="submit">Editar</button>
+            </form>
+        </section>
+
+
+        <!-- ELIMINAR EMPLEADOS -->
+        <section class="form_section">
+            <h1>ELIMINAR EMPLEADO</h1>
+            <form action="./php/sentencias.php" method="post" class="form">
+
+                <input type="hidden" name="table" value="empleado_eliminar">
+
+                <label for="id_empleado_eliminar">Id de empleado a eliminar</label>
+                <input type="number" name="id_empleado_eliminar" id="id_empleado_eliminar" placeholder="01" required>
+
+                <button type="submit">Eliminar</button>
+            </form>
+        </section>
+
+
+
+
+        <!--`` '' "" ´´-->
+    </main>
+
+
+    <footer class="mt-auto text-white-50">
+        <p>Ayuntamiento de Ixtlahuaca</p>
+    </footer>
+</div>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
