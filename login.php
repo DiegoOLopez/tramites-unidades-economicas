@@ -22,12 +22,14 @@ $clave_sha1 = sha1($clave);
 // Consultar la base de datos para verificar si el usuario y la contraseña son válidos
 $sql = "SELECT * FROM empleado WHERE usuario='$usuario' AND clave='$clave_sha1'";
 $result = $conn->query($sql);
+$datos = $result->fetch_assoc();
 
 // Verificar si se encontraron resultados
-if ($result->num_rows > 0) {
+if ($datos['usuario'] == $usuario && $datos['clave'] == $clave_sha1 ) {
     // Iniciar sesión y redirigir a la página de inicio
     session_start();
     $_SESSION['username'] = $usuario;
+    $_SESSION['estado'] = true;
     header('Location: panel.html');
 } else {
     // Si el nombre de usuario o la contraseña son incorrectos, mostrar un mensaje de error
