@@ -2,6 +2,20 @@
 <html lang="en" class="h-100" data-bs-theme="auto">
   <head>
     <script src="./assets/js/color-modes.js"></script>
+      <script src="./jquery/jquery.min.js"></script>
+      <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+          $.ajax({
+              url: './php/sesion.php',
+              type: 'post',
+              dataType: 'json',
+              success:function (respuesta){
+                  if (respuesta === 1){
+                      window.location.href = "panel.html";
+                  }
+              }
+          })
+      </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -9,7 +23,6 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- Custom styles -->
     <link href="./css/cover.css" rel="stylesheet">
     <!-- Estilos devteam -->
